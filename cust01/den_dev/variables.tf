@@ -20,31 +20,31 @@ variable "vsphere_unverified_ssl" {
 variable "vsphere_datacenter" {
   description = "In which datacenter the VM will be deployed"
   type        = "string"
-  default     = "Datacenter"
+  default     = "US-DEN-1A-SANS"
 }
 
 variable "vsphere_cluster" {
   description = "In which cluster the VM will be deployed"
   type        = "string"
-  default     = "resource01"
+  default     = "MGMT"
 }
 
 variable "vsphere_datastore" {
   description = "What is the name of the VM datastore"
   type        = "string"
-  default     = "R610-04-Raid5"
+  default     = "SAN-MGMT-DS01"
 }
 
 variable "vsphere_vm_template" {
   description = "Where is the VM template located"
   type        = "string"
-  default     = "template3"
+  default     = "CentOS 7.x x86_64 - 1 vCPU - 1 GB vRAM - 50 GB sda"
 }
 
 variable "vsphere_port_group" {
   description = "In which port group the VM NIC will be configured (default: VM Network)"
   type        = "string"
-  default     = "VM Network"
+  default     = "dpg-mgmt-oob-406"
 }
 
 variable "vsphere_time_zone" {
@@ -75,7 +75,7 @@ variable "vsphere_vm01_memory_size" {
 variable "vsphere_vm01_domain" {
   description = "What is the domain of the VM"
   type        = "string"
-  default     = ""
+  default     = "ad.sans.org"
 }
 
 variable "vsphere_vm01_ipv4_address" {
@@ -97,7 +97,7 @@ variable "vsphere_vm01_ipv4_gateway" {
 }
 
 variable "vsphere_vm01_dns_servers" {
-  description = "What are the DNS servers of the VM (default: 8.8.8.8,5.5.5.5)"
+  description = "What are the DNS servers of the VM (default: 10.60.21.100,10.60.21.101)"
   type        = "list"
-  default     = "8.8.8.8,5.5.5.5"
+  default     = "10.60.21.100,10.60.21.101"
 }
