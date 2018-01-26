@@ -32,13 +32,13 @@ variable "vsphere_cluster" {
 variable "vsphere_datastore" {
   description = "What is the name of the VM datastore"
   type        = "string"
-  default     = "SAN-MGMT-DS01"
+  default     = "SAN-MGMT-DS07"
 }
 
 variable "vsphere_vm_template" {
   description = "Where is the VM template located"
   type        = "string"
-  default     = "CentOS 7.x x86_64 - 1 vCPU - 1 GB vRAM - 50 GB sda"
+  default     = "template_centos7_terraform"
 }
 
 variable "vsphere_port_group" {
@@ -98,6 +98,6 @@ variable "vsphere_vm01_ipv4_gateway" {
 
 variable "vsphere_vm01_dns_servers" {
   description = "What are the DNS servers of the VM (default: 10.60.21.100,10.60.21.101)"
-  type        = "list"
+  type        = "string"
   default     = "10.60.21.100,10.60.21.101"
 }
